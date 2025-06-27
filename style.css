@@ -17,11 +17,19 @@ h2 {
     gap: 10px;
     margin-bottom: 20px 0;
 }
+ 
+input, select {
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+}
+
 #restaurant-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
+
 .restaurant {
     background: #fff;
     padding: 15px;
