@@ -68,7 +68,7 @@ fetch("https://raw.githubusercontent.com/iamspruce/search-filter-painate-reactjs
 
   .then(res => res.json())
   .then(data => {
-    const restaurants = data.restaurants.map(r => ({
+    const restaurants = data.map(r => ({
       ...r,
       score: predictPopularity(r.rating, r.reviews, r.price_level)
     }));
