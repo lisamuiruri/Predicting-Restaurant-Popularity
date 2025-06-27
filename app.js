@@ -63,12 +63,11 @@ function updateChart(data) {
   });
 }
 
-// 🔄 Updated fetch to load local db.json
-fetch("https://raw.githubusercontent.com/iamspruce/search-filter-painate-reactjs/main/data/data.json")
-
+// Fetch local db.json file
+fetch("db.json")
   .then(res => res.json())
   .then(data => {
-    const restaurants = data.map(r => ({
+    const restaurants = data.restaurants.map(r => ({
       ...r,
       score: predictPopularity(r.rating, r.reviews, r.price_level)
     }));
@@ -101,4 +100,5 @@ fetch("https://raw.githubusercontent.com/iamspruce/search-filter-painate-reactjs
     console.error("Fetch error:", err);
     document.getElementById("restaurant-list").innerText = "Failed to load restaurant data.";
   });
+
 
