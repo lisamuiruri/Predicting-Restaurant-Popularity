@@ -64,7 +64,8 @@ function updateChart(data) {
 }
 
 // 🔄 Updated fetch to load local db.json
-fetch("db.json")
+fetch("https://raw.githubusercontent.com/iamspruce/search-filter-painate-reactjs/main/data/data.json")
+
   .then(res => res.json())
   .then(data => {
     const restaurants = data.restaurants.map(r => ({
