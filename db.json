@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Java House",
-      "location": "Nairobi",
+      "location": "parklands",
       "rating": 4.3,
       "reviews": 120,
       "price_level": 2,
